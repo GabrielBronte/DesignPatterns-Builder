@@ -1,12 +1,12 @@
 public class Curso {
     private int codigo;
-    private int qtdAlunos;
+    private int cargaHoraria;
     private String area;
     private String faculdade;
 
     public Curso() {
         this.codigo = 0;
-        this.qtdAlunos = 0;
+        this.cargaHoraria = 0;
         this.area = "";
         this.faculdade = "";
     }
@@ -19,12 +19,12 @@ public class Curso {
         this.codigo = codigo;
     }
 
-    public int getQtdAlunos() {
-        return qtdAlunos;
+    public int getCargaHoraria() {
+        return cargaHoraria;
     }
 
-    public void setQtdAlunos(int qtdAlunos) {
-        this.qtdAlunos = qtdAlunos;
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
     }
 
     public String getArea() {

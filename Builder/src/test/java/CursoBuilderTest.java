@@ -9,7 +9,7 @@ class CursoBuilderTest {
             CursoBuilder cursoBuilder = new CursoBuilder();
             Curso curso = cursoBuilder
                     .setCodigo(-1)
-                    .setQtdAlunos(300)
+                    .setCargaHoraria(300)
                     .setArea("Tecnologia")
                     .setFaculdade("Engenharia de Software - UFJF")
                     .build();
@@ -20,18 +20,18 @@ class CursoBuilderTest {
     }
 
     @Test
-    public void deveRetornarQtdAlunoInvalido() {
+    public void deveRetornarCargaHorariaInvalida() {
         try {
             CursoBuilder cursoBuilder = new CursoBuilder();
             Curso curso = cursoBuilder
                     .setCodigo(1974)
-                    .setQtdAlunos(-1)
+                    .setCargaHoraria(-1)
                     .setArea("Tecnologia")
                     .setFaculdade("Engenharia de Software - UFJF")
                     .build();
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Número de alunos total inválido", e.getMessage());
+            assertEquals("Carga horária do curso inválida", e.getMessage());
         }
     }
 
@@ -41,7 +41,7 @@ class CursoBuilderTest {
             CursoBuilder cursoBuilder = new CursoBuilder();
             Curso curso = cursoBuilder
                     .setCodigo(1974)
-                    .setQtdAlunos(150)
+                    .setCargaHoraria(150)
                     .setArea("")
                     .setFaculdade("UFJF")
                     .build();
@@ -57,7 +57,7 @@ class CursoBuilderTest {
             CursoBuilder cursoBuilder = new CursoBuilder();
             Curso curso = cursoBuilder
                     .setCodigo(1974)
-                    .setQtdAlunos(150)
+                    .setCargaHoraria(150)
                     .setArea("Tecnologia")
                     .setFaculdade("")
                     .build();

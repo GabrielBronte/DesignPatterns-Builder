@@ -10,8 +10,8 @@ public class CursoBuilder {
         if (curso.getCodigo() < 1) {
             throw new IllegalArgumentException("Código inválido");
         }
-        if (curso.getQtdAlunos() < 1) {
-            throw new IllegalArgumentException("Número de alunos total inválido");
+        if (curso.getCargaHoraria() < 1) {
+            throw new IllegalArgumentException("Carga horária do curso inválida");
         }
         if (curso.getArea().equals("")) {
             throw new IllegalArgumentException("Área do curso inválida");
@@ -28,8 +28,8 @@ public class CursoBuilder {
         return this;
     }
 
-    public CursoBuilder setQtdAlunos(int numeroDeAlunos) {
-        curso.setQtdAlunos(numeroDeAlunos);
+    public CursoBuilder setCargaHoraria(int cargaHoraria) {
+        curso.setCargaHoraria(cargaHoraria);
         return this;
     }
 
